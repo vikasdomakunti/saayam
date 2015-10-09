@@ -1,6 +1,4 @@
-.magic {
-  background: white;
-}
-.tmagic {
-  background: pink;
+body {
+  width: 1350px;
+  margin: 0 auto;
 }

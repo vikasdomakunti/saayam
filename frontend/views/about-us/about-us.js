@@ -7,12 +7,10 @@ define([
     var AboutUsPageView = Backbone.View.extend({
         el: $('#container'),
         render: function(){
-            // Using Underscore we can compile our template with data
             var data = {};
 
             var compiledTemplate = _.template(aboutUsTemplate,data);
-            console.log(this.$el);
-            // Append our compiled template to this Views "el"
+            console.log(compiledTemplate);
             this.$el.html(compiledTemplate);
         }
     });
