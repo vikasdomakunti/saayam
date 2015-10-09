@@ -5,7 +5,7 @@ define([
   'text!templates/contact-us/contact-us.html'
 ], function($, _, Backbone, ContactUsTemplate) {
   var ContactUsPageView = Backbone.View.extend({
-    el: $('#container'),
+    el: $('#contact-us'),
     render: function() {
       var data = {};
 

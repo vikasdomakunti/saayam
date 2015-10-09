@@ -2,10 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/team/team.html'
+  'text!templates/the-beginning/the-beginning.html'
 ], function($, _, Backbone, TheBeginningTemplate){
   var TheBeginningPageView = Backbone.View.extend({
-    el: $('#container'),
+    el: $('#the-beginning'),
     render: function(){
       var data = {};
 

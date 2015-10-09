@@ -2,10 +2,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/kid/kid.html'
+  'text!templates/kids/kids.html'
 ], function($, _, Backbone, KidTemplate){
   var KidPageView = Backbone.View.extend({
-    el: $('#container'),
+    el: $('#kids'),
     render: function(){
       var data = {};
 

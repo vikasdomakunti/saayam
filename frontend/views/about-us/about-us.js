@@ -5,7 +5,7 @@ define([
     'text!templates/about-us/about-us.html'
 ], function($, _, Backbone, AboutUsTemplate){
     var AboutUsPageView = Backbone.View.extend({
-        el: $('#container'),
+        el: $('#about-us'),
         render: function(){
             var data = {};
 

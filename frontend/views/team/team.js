@@ -5,7 +5,7 @@ define([
     'text!templates/team/team.html'
 ], function($, _, Backbone, TeamTemplate){
     var TeamPageView = Backbone.View.extend({
-        el: $('#container'),
+        el: $('#team'),
         render: function(){
             var data = {};
 

@@ -7,7 +7,7 @@ define([
   'views/home/home',
   'views/about-us/about-us',
   'views/the-beginning/the-beginning',
-  'views/kid/kid',
+  'views/kids/kids',
   'views/timeline/timeline',
   'views/team/team',
   'views/contact-us/contact-us',

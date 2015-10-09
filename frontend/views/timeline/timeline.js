@@ -5,7 +5,7 @@ define([
   'text!templates/timeline/timeline.html'
 ], function($, _, Backbone, TimelineTemplate){
   var TimelinePageView = Backbone.View.extend({
-    el: $('#container'),
+    el: $('#timeline'),
     render: function(){
       var data = {};
 

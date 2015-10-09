@@ -5,7 +5,7 @@ define([
     'text!templates/home/home.html'
 ], function($, _, Backbone, HomeTemplate){
     var HomePageView = Backbone.View.extend({
-        el: $('#container'),
+        el: $('#home'),
         render: function(){
             var data = {};
 
