@@ -1,4 +1,7 @@
-body {
+@import 'frontend/views/navbar/navbar.css';
+
+
+#container {
   width: 1350px;
   margin: 0 auto;
 }

@@ -14,6 +14,5 @@ define([
             this.$el.html(compiledTemplate);
         }
     });
-    // Our module now returns our view
     return AboutUsPageView;
 });
