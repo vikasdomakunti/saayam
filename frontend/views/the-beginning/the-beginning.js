@@ -2,14 +2,18 @@ define([
   'jquery',
   'underscore',
   'backbone',
-], function($, _, Backbone){
-  var HomePageView = Backbone.View.extend({
+  'text!templates/team/team.html'
+], function($, _, Backbone, TheBeginningTemplate){
+  var TheBeginningPageView = Backbone.View.extend({
     el: $('#container'),
     render: function(){
-      // Using Underscore we can compile our template with data
       var data = {};
+
+      var compiledTemplate = _.template(TheBeginningTemplate,data);
+      console.log(compiledTemplate);
+      this.$el.html(compiledTemplate);
     }
   });
   // Our module now returns our view
-  return HomePageView;
+  return TheBeginningPageView;
 });

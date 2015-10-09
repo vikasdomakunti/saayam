@@ -1,14 +1,17 @@
-// Filename: views/project/list
 define([
     'jquery',
     'underscore',
     'backbone',
-], function($, _, Backbone){
+    'text!templates/home/home.html'
+], function($, _, Backbone, HomeTemplate){
     var HomePageView = Backbone.View.extend({
         el: $('#container'),
         render: function(){
-            // Using Underscore we can compile our template with data
             var data = {};
+
+            var compiledTemplate = _.template(HomeTemplate,data);
+            console.log(compiledTemplate);
+            this.$el.html(compiledTemplate);
         }
     });
     // Our module now returns our view
