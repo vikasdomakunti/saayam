@@ -1,19 +1,14 @@
-define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'text!templates/the-beginning/the-beginning.html'
-], function($, _, Backbone, TheBeginningTemplate){
-  var TheBeginningPageView = Backbone.View.extend({
-    el: $('#the-beginning'),
-    render: function(){
-      var data = {};
+var $ = require('jquery'),
+  _ = require('underscore'),
+  Backbone = require('backbone'),
+  TEMPLATE =  require('../../templates/about-us/about-us.hbs');
 
-      var compiledTemplate = _.template(TheBeginningTemplate,data);
-      console.log(compiledTemplate);
-      this.$el.html(compiledTemplate);
-    }
-  });
-  // Our module now returns our view
-  return TheBeginningPageView;
+var TheBeginningPageView = Backbone.View.extend({
+  el: $('#the-beginning'),
+  render: function() {
+    var data = {};
+    this.$el.html(TEMPLATE(data));
+  }
 });
+
+module.exports = TheBeginningPageView;

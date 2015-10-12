@@ -1,18 +1,17 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'text!templates/about-us/about-us.html'
-], function($, _, Backbone, AboutUsTemplate){
-    var AboutUsPageView = Backbone.View.extend({
-        el: $('#about-us'),
-        render: function(){
-            var data = {};
+var $ = require('jquery'),
+  _ = require('underscore'),
+  Backbone = require('backbone'),
+  TEMPLATE =  require('../../templates/about-us/about-us.hbs');
 
-            var compiledTemplate = _.template(AboutUsTemplate,data);
-            console.log(compiledTemplate);
-            this.$el.html(compiledTemplate);
-        }
-    });
-    return AboutUsPageView;
+var AboutUsPageView = Backbone.View.extend({
+  el: $('#about-us'),
+  render: function() {
+    var data = {};
+    //
+    //var compiledTemplate = _.template(TEMPLATE, data);
+    //console.log(compiledTemplate);
+    this.$el.html(TEMPLATE(data));
+  }
 });
+
+module.exports = AboutUsPageView;

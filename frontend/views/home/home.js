@@ -1,18 +1,13 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'text!templates/home/home.html'
-], function($, _, Backbone, HomeTemplate){
-    var HomePageView = Backbone.View.extend({
-        el: $('#home'),
-        render: function(){
-            var data = {};
+var $ = require('jquery'), _ = require('underscore'),
+  Backbone = require('backbone'),
+  TEMPLATE = require('../../templates/kids/kids.hbs');
 
-            var compiledTemplate = _.template(HomeTemplate,data);
-            console.log(compiledTemplate);
-            this.$el.html(compiledTemplate);
-        }
-    });
-    return HomePageView;
+var HomePageView = Backbone.View.extend({
+  el: $('#home'),
+  render: function() {
+    var data = {};
+    this.$el.html(TEMPLATE(data));
+  }
 });
+
+module.exports = HomePageView;

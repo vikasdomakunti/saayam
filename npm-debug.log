@@ -1,57 +1,24 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install',
-1 verbose cli   '--save-dev',
-1 verbose cli   'https://github.com/matthieua/WOW.git#master' ]
+1 verbose cli   'install' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
 4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 verbose readDependencies using package.json deps
-6 verbose cache add [ 'https://github.com/matthieua/WOW.git#master', null ]
-7 verbose cache add name=undefined spec="https://github.com/matthieua/WOW.git#master" args=["https://github.com/matthieua/WOW.git#master",null]
-8 verbose parsed url { protocol: 'https:',
-8 verbose parsed url   slashes: true,
-8 verbose parsed url   auth: null,
-8 verbose parsed url   host: 'github.com',
-8 verbose parsed url   port: null,
-8 verbose parsed url   hostname: 'github.com',
-8 verbose parsed url   hash: '#master',
-8 verbose parsed url   search: null,
-8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: '/matthieua/WOW.git',
-8 verbose parsed url   path: '/matthieua/WOW.git',
-8 verbose parsed url   href: 'https://github.com/matthieua/WOW.git#master' }
-9 silly lockFile 5c108388-hub-com-matthieua-WOW-git-master https://github.com/matthieua/WOW.git#master
-10 verbose lock https://github.com/matthieua/WOW.git#master C:\Users\sg0220984\AppData\Roaming\npm-cache\5c108388-hub-com-matthieua-WOW-git-master.lock
-11 verbose addRemoteTarball [ 'https://github.com/matthieua/WOW.git#master', null ]
-12 info retry fetch attempt 1 at 00:29:42
-13 verbose fetch to= C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git
-14 http GET https://github.com/matthieua/WOW.git#master
-15 http 200 https://github.com/matthieua/WOW.git#master
-16 verbose tar unpack C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git
-17 silly lockFile 4d1832c2-hub-com-matthieua-WOW-git-unpack tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git-unpack
-18 verbose lock tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git-unpack C:\Users\sg0220984\AppData\Roaming\npm-cache\4d1832c2-hub-com-matthieua-WOW-git-unpack.lock
-19 silly lockFile 276154bd-nm0-github-com-matthieua-WOW-git tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git
-20 verbose lock tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git C:\Users\sg0220984\AppData\Roaming\npm-cache\276154bd-nm0-github-com-matthieua-WOW-git.lock
-21 silly gunzTarPerm modes [ '777', '666' ]
-22 error not a package C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git
-23 silly lockFile 4d1832c2-hub-com-matthieua-WOW-git-unpack tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git-unpack
-24 silly lockFile 4d1832c2-hub-com-matthieua-WOW-git-unpack tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git-unpack
-25 silly lockFile 276154bd-nm0-github-com-matthieua-WOW-git tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git
-26 silly lockFile 276154bd-nm0-github-com-matthieua-WOW-git tar://C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git
-27 silly lockFile 5c108388-hub-com-matthieua-WOW-git-master https://github.com/matthieua/WOW.git#master
-28 silly lockFile 5c108388-hub-com-matthieua-WOW-git-master https://github.com/matthieua/WOW.git#master
-29 error Error: ENOENT, open 'C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git-unpack\package.json'
-30 error If you need help, you may report this *entire* log,
-30 error including the npm and node versions, at:
-30 error     <http://github.com/npm/npm/issues>
-31 error System Windows_NT 6.1.7601
-32 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save-dev" "https://github.com/matthieua/WOW.git#master"
-33 error cwd C:\Personal Projects\Saayam
-34 error node -v v0.10.33
-35 error npm -v 1.4.28
-36 error path C:\Users\sg0220984\AppData\Local\Temp\npm-8960-r1PJ-nm0\github.com\matthieua\WOW.git-unpack\package.json
-37 error code ENOENT
-38 error errno 34
-39 verbose exit [ 34, true ]
+5 error install Couldn't read dependencies
+6 error Failed to parse json
+6 error Unexpected token }
+7 error File: C:\Personal Projects\Saayam\package.json
+8 error Failed to parse package.json data.
+8 error package.json must be actual JSON, not just JavaScript.
+8 error
+8 error This is not a bug in npm.
+8 error Tell the package author to fix their package.json file. JSON.parse
+9 error System Windows_NT 6.1.7601
+10 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+11 error cwd C:\Personal Projects\Saayam
+12 error node -v v0.10.33
+13 error npm -v 1.4.28
+14 error file C:\Personal Projects\Saayam\package.json
+15 error code EJSONPARSE
+16 verbose exit [ 1, true ]

@@ -1,16 +1,10 @@
 // Filename: app.js
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'router' // Request router.js
-], function($, _, Backbone,Router){
-    var initialize = function(){
-        // Pass in our Router module and call it's initialize function
-        Router.initialize();
-    }
+var $ = require('jquery');
+    window.$ = $,
+    window.jQuery = $,
+    _ = require('underscore'),
+    Backbone = require('backbone'),
+    Router = require('./router');
 
-    return {
-        initialize: initialize
-    };
-});
+var App = Router.initialize();
+module.export = App;

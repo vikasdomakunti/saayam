@@ -1,19 +1,13 @@
-define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'text!templates/contact-us/contact-us.html'
-], function($, _, Backbone, ContactUsTemplate) {
-  var ContactUsPageView = Backbone.View.extend({
-    el: $('#contact-us'),
-    render: function() {
-      var data = {};
+  _ = require('underscore'),
+  Backbone = require('backbone'),
+  TEMPLATE =  require('../../templates/kids/kids.hbs');
 
-      var compiledTemplate = _.template(ContactUsTemplate, data);
-      console.log(compiledTemplate);
-      this.$el.html(compiledTemplate);
-    }
-  });
-  // Our module now returns our view
-  return ContactUsPageView;
+var ContactUsPageView = Backbone.View.extend({
+  el: $('#contact-us'),
+  render: function() {
+    var data = {};
+    this.$el.html(TEMPLATE(data));
+  }
 });
+
+module.exports = ContactUsPageView;

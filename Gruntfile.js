@@ -3,25 +3,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.registerTask('serve', ['connect:server']);
-  grunt.registerTask('default', ['less','concurrent:default']);
-
-
+  grunt.registerTask('default', ['less','browserify','concurrent:default']);
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     connect: {
       server: {
         options: {
           port: 8000,
           keepalive: true,
           livereload: true
-        }
-      }
-    },
-    jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
-      options: {
-        globals: {
-          jQuery: true
         }
       }
     },
@@ -34,10 +25,11 @@ module.exports = function(grunt) {
     },
     watch: {
       js: {
-        files: ['frontend/**/*.js','frontend/**/*.html']
+        files: ['frontend/**/*.js','frontend/**/*.hbs'],
+        tasks:['browserify']
       },
       less: {
-        files: ['frontend/**/*.less','frontend/*.less','frontend/**/**/*.less'],
+        files: ['frontend/**/*.less'],
         tasks:['less']
       },
       options: {
@@ -50,9 +42,19 @@ module.exports = function(grunt) {
       options: {
         logConcurrentOutput: true
       }
+    },
+    browserify: {
+      dist: {
+        files: {
+          'public/js/bundle.js': ['frontend/**/*.js','frontend/**/*.hbs']
+        },
+        options: {
+          transform: ['hbsfy']
+        }
+      }
     }
+
   });
-
-
+  grunt.loadNpmTasks('grunt-browserify');
 };
 

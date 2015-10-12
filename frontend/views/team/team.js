@@ -1,19 +1,17 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'text!templates/team/team.html'
-], function($, _, Backbone, TeamTemplate){
-    var TeamPageView = Backbone.View.extend({
-        el: $('#team'),
-        render: function(){
-            var data = {};
+var $ = require('jquery'),
+  _ = require('underscore'),
+  Backbone = require('backbone'),
+  TEMPLATE =  require('../../templates/about-us/about-us.hbs');
 
-            var compiledTemplate = _.template(TeamTemplate,data);
-            console.log(compiledTemplate);
-            this.$el.html(compiledTemplate);
-        }
-    });
-    // Our module now returns our view
-    return TeamPageView;
+var TeamPageView = Backbone.View.extend({
+    el: $('#team'),
+    render: function() {
+        var data = {};
+        //
+        //var compiledTemplate = _.template(TEMPLATE, data);
+        //console.log(compiledTemplate);
+        this.$el.html(TEMPLATE(data));
+    }
 });
+
+module.exports = TeamPageView;

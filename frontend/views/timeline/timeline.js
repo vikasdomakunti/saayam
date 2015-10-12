@@ -1,19 +1,14 @@
-define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'text!templates/timeline/timeline.html'
-], function($, _, Backbone, TimelineTemplate){
-  var TimelinePageView = Backbone.View.extend({
-    el: $('#timeline'),
-    render: function(){
-      var data = {};
+var $ = require('jquery'),
+  _ = require('underscore'),
+  Backbone = require('backbone'),
+  TEMPLATE =  require('../../templates/about-us/about-us.hbs');
 
-      var compiledTemplate = _.template(TimelineTemplate,data);
-      console.log(compiledTemplate);
-      this.$el.html(compiledTemplate);
-    }
-  });
-  // Our module now returns our view
-  return TimelinePageView;
+var TimelinePageView = Backbone.View.extend({
+  el: $('#timeline'),
+  render: function() {
+    var data = {};
+    this.$el.html(TEMPLATE(data));
+  }
 });
+
+module.exports = TimelinePageView;
