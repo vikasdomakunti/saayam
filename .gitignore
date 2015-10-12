@@ -4,4 +4,4 @@
 .idea/*.xml
 node_modules
 npm-debug.log
-index.css
+public/*
