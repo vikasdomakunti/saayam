@@ -1,7 +1,7 @@
 var $ = require('jquery'),
   _ = require('underscore'),
   Backbone = require('backbone'),
-  TEMPLATE =  require('../../templates/about-us/about-us.hbs');
+  TEMPLATE =  require('../../templates/the-beginning/the-beginning.hbs');
 
 var TheBeginningPageView = Backbone.View.extend({
   el: $('#the-beginning'),

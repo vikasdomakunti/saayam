@@ -1,7 +1,7 @@
 var $ = require('jquery'),
   _ = require('underscore'),
   Backbone = require('backbone'),
-  TEMPLATE =  require('../../templates/about-us/about-us.hbs');
+  TEMPLATE =  require('../../templates/timeline/timeline.hbs');
 
 var TimelinePageView = Backbone.View.extend({
   el: $('#timeline'),

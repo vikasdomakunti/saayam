@@ -1,6 +1,6 @@
 var $ = require('jquery'), _ = require('underscore'),
   Backbone = require('backbone'),
-  TEMPLATE = require('../../templates/kids/kids.hbs');
+  TEMPLATE = require('../../templates/home/home.hbs');
 
 var HomePageView = Backbone.View.extend({
   el: $('#home'),
