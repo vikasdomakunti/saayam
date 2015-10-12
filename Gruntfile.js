@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     less: {
       compile: {
         files: {
-          'public/css/index.css':  ['*.less','frontend/**/*.less']
+          'public/css/index.css':  ['index.less','frontend/**/*.less']
         }
       }
     },
